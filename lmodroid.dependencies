@@ -1,17 +1,21 @@
 [
   {
+    "remote": "lineage",
     "repository": "android_hardware_xiaomi",
     "target_path": "hardware/xiaomi"
   },
   {
+    "remote": "lineage",
     "repository": "android_kernel_xiaomi_sm8550",
     "target_path": "kernel/xiaomi/sm8550"
   },
   {
+    "remote": "lineage",
     "repository": "android_kernel_xiaomi_sm8550-devicetrees",
     "target_path": "kernel/xiaomi/sm8550-devicetrees"
   },
   {
+    "remote": "lineage",
     "repository": "android_kernel_xiaomi_sm8550-modules",
     "target_path": "kernel/xiaomi/sm8550-modules"
   }

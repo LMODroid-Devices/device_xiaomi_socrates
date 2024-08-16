@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_socrates.mk
+    $(LOCAL_DIR)/lmodroid_socrates.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_socrates-eng \
-    lineage_socrates-user \
-    lineage_socrates-userdebug
+    lmodroid_socrates-eng \
+    lmodroid_socrates-user \
+    lmodroid_socrates-userdebug
