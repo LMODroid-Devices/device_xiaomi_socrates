@@ -16,6 +16,8 @@ if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
 ANDROID_ROOT="${MY_DIR}/../../.."
 
+export TARGET_ENABLE_CHECKELF=true
+
 # If XML files don't have comments before the XML header, use this flag
 # Can still be used with broken XML files by using blob_fixup
 export TARGET_DISABLE_XML_FIXING=true
@@ -68,10 +70,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i s/xml=version/xml\ version/g "${2}"
             ;;
-        vendor/etc/audio/sku_kalama/audio_policy_configuration.xml)
-            [ "$2" = "" ] && return 0
-            sed -i s/AUDIO_FORMAT_LC3//g "${2}"
-            ;;
         vendor/bin/hw/android.hardware.security.keymint-service-qti)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
@@ -91,6 +89,12 @@ function blob_fixup() {
         vendor/etc/qcril_database/upgrade/config/6.0_config.sql)
             [ "$2" = "" ] && return 0
             sed -i '/persist.vendor.radio.redir_party_num/ s/true/false/g' "${2}"
+            ;;
+        vendor/etc/init/hw/init.qcom.rc)
+            sed -i s:/vendor/bin/ssgqmigd:/vendor/bin/ssgqmigd64:g "${2}"
+            ;;
+        vendor/lib64/libqtikeymint.so)
+            grep -q "android.hardware.security.rkp-V3-ndk.so" "${2}" || ${PATCHELF} --add-needed "android.hardware.security.rkp-V3-ndk.so" "${2}"
             ;;
         *)
             return 1
