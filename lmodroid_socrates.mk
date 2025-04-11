@@ -16,7 +16,7 @@ $(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
 
 PRODUCT_NAME := lmodroid_socrates
 PRODUCT_DEVICE := socrates
-PRODUCT_MODEL := Redmi K60 Pro
+PRODUCT_MODEL := 22127RK46C
 PRODUCT_BRAND := Redmi
 PRODUCT_MANUFACTURER := Xiaomi
 
