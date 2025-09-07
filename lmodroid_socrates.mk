@@ -12,9 +12,9 @@ $(call inherit-product, build/make/target/product/core_64_bit_only.mk)
 $(call inherit-product, device/xiaomi/socrates/device.mk)
 
 # Inherit LineageOS configurations
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lmodroid/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_socrates
+PRODUCT_NAME := lmodroid_socrates
 PRODUCT_DEVICE := socrates
 PRODUCT_MODEL := 22127RK46C
 PRODUCT_BRAND := Redmi

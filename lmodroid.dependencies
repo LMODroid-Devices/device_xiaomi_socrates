@@ -1,21 +1,25 @@
 [
   {
+    "remote": "lineage",
     "repository": "android_hardware_xiaomi",
     "target_path": "hardware/xiaomi"
   },
   {
-    "repository": "android_device_xiaomi_sm8550-common",
+    "repository": "LMODroid-Devices/device_xiaomi_sm8550-common",
     "target_path": "device/xiaomi/sm8550-common"
   },
   {
+    "remote": "lineage",
     "repository": "android_kernel_xiaomi_sm8550",
     "target_path": "kernel/xiaomi/sm8550"
   },
   {
+    "remote": "lineage",
     "repository": "android_kernel_xiaomi_sm8550-devicetrees",
     "target_path": "kernel/xiaomi/sm8550-devicetrees"
   },
   {
+    "remote": "lineage",
     "repository": "android_kernel_xiaomi_sm8550-modules",
     "target_path": "kernel/xiaomi/sm8550-modules"
   }
